@@ -115,7 +115,7 @@ resource "aws_route_table_association" "database_rt_assoc" {
 }
 
 # grouping database subnets 
-resource "aws_db_subnet_group" "database-sub-group" {
+resource "aws_db_subnet_group" "database_sub_group" {
   name       = var.project_name
   subnet_ids = aws_subnet.public_subnet[*].id
 
